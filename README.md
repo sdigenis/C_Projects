@@ -1,4 +1,4 @@
-#C Projects
+# C Projects
 
 This repository contains mostly university projects aiming to 
 learn better C programming Language and basic computer features
