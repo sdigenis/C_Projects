@@ -14,12 +14,12 @@ that as an input otherwise it will exit giving an error message.
 If it's a new file it will continue writing the new file to the filesystem.
 
 Once you run it, you will be presented with the menu : <br />
-&emsp   1.import(i) <br />
-&emsp   2.find(f) <br />
-&emsp   3.export(e) <br />
-&emsp   4.delete(d) <br />
-&emsp   5.quit(q) <br />
-&emsp   Select an option: <br />
+&emsp;   1.import(i) <br />
+&emsp;   2.find(f) <br />
+&emsp;   3.export(e) <br />
+&emsp;   4.delete(d) <br />
+&emsp;   5.quit(q) <br />
+&emsp;   Select an option: <br />
 
 It is self-explanatory, you just need to provide the option and then you provide the 
 file's name you want to import find export or delete from the database.

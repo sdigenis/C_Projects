@@ -37,22 +37,22 @@ disconnected and how many tickets he has reserved. <br />
 An agent when he gets the confirmation to enter the shared memory (if there 
 are already enough agents connectes there will be a message that the system is
 full and it will end the process) there will this menu on the screen  <br />
-&emsp   FIND RESERVE EXIT
+&emsp;   FIND RESERVE EXIT
  <br />
 there the agent can find a specific flight by giving the command <br />
-&emsp   f SRC DEST #number of tickets  <br />
+&emsp;   f SRC DEST #number of tickets  <br />
 ex <br />
-&emsp   f ATH FRA 3 <br />
+&emsp;   f ATH FRA 3 <br />
 and he will get a reply in which airlines have this flight and how available 
 tickets there are in each airline. <br />
 Then he can book the tickets by running the command <br />
-&emsp   r SRC DEST AIRLINE #number of tickets <br />
+&emsp;   r SRC DEST AIRLINE #number of tickets <br />
 ex. <br />
-&emsp   r ATH FRA A3 3 <br />
+&emsp;   r ATH FRA A3 3 <br />
 and if there are enough tickets he will get a message that he indeed made the 
 reservation. <br />
 In order to exit the agent just needs to run the command  <br />
-&emsp   e
+&emsp;   e
 
 After all the clients have exited the server, the server process ends as well 
 printing how many tickets in total have been booked. <br />

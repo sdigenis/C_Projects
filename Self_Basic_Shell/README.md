@@ -22,15 +22,15 @@ terminate or signal a specific process that runs, as well as
 listing all the processes that are currently running. <br />
  <br />
 Executing a program command: <br />
-&emsp   exec <program name> <args>  <br />
+&emsp;   exec <program name> <args>  <br />
 Terminating a process command:  <br />
-&emsp   term <process id>  <br />
+&emsp;   term <process id>  <br />
 Signal a process: <br />
-&emsp   sig <process id> <br />
+&emsp;   sig <process id> <br />
 Listing all the ids of the processes running: <br />
-&emsp   list <br />
+&emsp;   list <br />
 Quiting the shell: <br />
-&emsp   quit <br />
+&emsp;   quit <br />
 
 In order to test the function of the project there is the 
 test.c file. Its function is to raise a counter every 5 
