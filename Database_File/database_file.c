@@ -169,7 +169,7 @@ void ffind(int fd, char file_name[]){
         read(fd,current_file_name,current_file_name_size);
         current_file_name[current_file_name_size]='\0';
         if(strstr(current_file_name,file_name)!=NULL || strcmp(file_name,"*")==0){
-            printf("%s\n", current_file_name);
+            printf("\t%s\n", current_file_name);
         }
         read(fd,&current_file_size,sizeof(int));
         my_lseek(fd,+current_file_size,SEEK_CUR);
@@ -238,7 +238,7 @@ void fexport(int fd, char *file_name, char *destination){
     
     if(searchSuccess(fd, file_name)==1){
         printf("This file doesn't exist in the database! \n");
-        exit(0);
+        return;
     }
     else{
         fd_file=open(destination,O_RDWR | O_EXCL | O_CREAT, S_IRWXU);
@@ -395,7 +395,8 @@ int main(int argc, char *argv[]){
                 closef(fd);
                 return 0;
             default: 
-                return 0;
+                printf("\tPlease enter a valid option!\n");
+                //return 0;
         }
     }
     return 0; 

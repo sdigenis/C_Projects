@@ -97,7 +97,7 @@ int main(int argc , char *argv[]){
 	int number_structs;
 	long int client_id;
 	int seats_booked;
-	char option/*, end2*/;
+	char option, end2;
 	int newfile, number;
 	int j, online=0;
 	key_t keys, keym;
@@ -125,8 +125,9 @@ int main(int argc , char *argv[]){
 	dup2(STDIN_FILENO, 1);
 	dup2(fdfile,STDIN_FILENO);
 	keym=ftok(".", 'a');
-	number_structs=(file_size / sizeof(struct airticket) +1)  ;
-	shmid=shmget(keym,number_structs*sizeof(AirTicket), IPC_CREAT|IPC_EXCL|S_IRWXU);
+	number_structs=(file_size / sizeof(struct airticket) )  ;
+//     printf("%d\n", number_structs);
+	shmid=shmget(keym,number_structs*sizeof(AirTicket), IPC_CREAT|/*IPC_EXCL|*/S_IRWXU);
 	if(shmid==-1){
 		shmdt(shm_P);
 		shmctl(shmid,IPC_RMID,NULL);
@@ -285,12 +286,9 @@ int main(int argc , char *argv[]){
 					agent[i].seats=agent[i].seats+seats_booked;
 					printf("Agent: %ld booked %d tickets\n", agent[i].id, seats_booked);
 				}
-				if(option=='Q'){
-					continue;
-				}
 				
 			} 
-			/*if(sd==STDIN_FILENO){
+			if(i==STDIN_FILENO){
                 scanf(" %c", &end2);
                 if(end2=='Q'){
                     for(k=0;i<max_clients;k++){
@@ -302,7 +300,7 @@ int main(int argc , char *argv[]){
                     end=1;
                     break;
                 }
-            }*/
+            }
 			 if(end==1)
                 break;
 		} 
