@@ -34,9 +34,9 @@ you can run each process differently or combined by running the main process
 or by pipes through the terminal. <br />
 
 A sample run would be: <br />
-'''bash
+```bash
 ./main -E dir password filename
-'''
+```
 The first parameter can be either -E for archiving and encrypting and -D for 
 decrypting and unarchiving. <br />
 

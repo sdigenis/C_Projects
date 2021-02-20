@@ -17,16 +17,16 @@ handle, a file that contains the flight information (flights directory)
 and a key that will be neeeded to the agents to connect. <br />
 
 An example would be: 
-'''bash
+```bash
     ./server 4 flights/flightInfoShort.txt key
-'''
+```
 The agent process runs the agent process, which gets as arguments the 
 key of the server's communication. <br />
 
 An example would be:
-'''bash
+```bash
     ./agent key
-'''
+```
 When the server starts running it waits an agent to connect. When a new 
 agent connects it will give a message saying that a specific agent connected.
 Also when a new reservation will be made there is a message to the server 
@@ -37,22 +37,22 @@ disconnected and how many tickets he has reserved. <br />
 An agent when he gets the confirmation to enter the shared memory (if there 
 are already enough agents connectes there will be a message that the system is
 full and it will end the process) there will this menu on the screen  <br />
-    FIND RESERVE EXIT
+&emsp   FIND RESERVE EXIT
  <br />
 there the agent can find a specific flight by giving the command <br />
-    f SRC DEST #number of tickets  <br />
+&emsp   f SRC DEST #number of tickets  <br />
 ex <br />
-    f ATH FRA 3 <br />
+&emsp   f ATH FRA 3 <br />
 and he will get a reply in which airlines have this flight and how available 
 tickets there are in each airline. <br />
 Then he can book the tickets by running the command <br />
-    r SRC DEST AIRLINE #number of tickets <br />
+&emsp   r SRC DEST AIRLINE #number of tickets <br />
 ex. <br />
-    r ATH FRA A3 3 <br />
+&emsp   r ATH FRA A3 3 <br />
 and if there are enough tickets he will get a message that he indeed made the 
 reservation. <br />
 In order to exit the agent just needs to run the command  <br />
-    e
+&emsp   e
 
 After all the clients have exited the server, the server process ends as well 
 printing how many tickets in total have been booked. <br />
